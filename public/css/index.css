@@ -1,0 +1,25 @@
+#form{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    position: relative;
+}
+
+#form *{
+    width: 70%;
+    padding: 3px;
+    background-color: #f1f1f1;
+    border-color: black;
+    margin: 3px;
+    padding: 8px;
+}
+
+#bnConfirm{
+    position: absolute;
+    right: 0%;
+    top: 34%;
+    width: 25%;
+    background-color: #4f4fff;
+    color: white;
+    font-weight: bold;
+}
