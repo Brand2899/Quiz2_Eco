@@ -18,5 +18,9 @@
   "homepage": "https://github.com/Brand2899/Quiz2_Eco#readme",
   "dependencies": {
     "firebase": "^9.2.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.61.0",
+    "webpack-cli": "^4.9.1"
   }
 }
