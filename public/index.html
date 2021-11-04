@@ -1,17 +1,35 @@
 <!DOCTYPE html>
+
 <html>
+
     <head>
-        <title>Quiz2 Ecosistemas</title>
+        <title>Semana10</title>
         <link rel = "stylesheet" href = "css/index.css">
     </head>
-    <body>
-        <h1>Profesores Inc</h1>
 
-        <div id="form">
-            <input id="student" type="text" placeholder="Estudiante">
-            <input id="code" type="text" placeholder="Código">
-            <input id="course" type="text" placeholder="Curso">
-            <button id="bnConfirm">Matricular</button>
+
+    <body>
+        <h1 id = "title">LAPSUS NAPOLEÓN FRANCO</h1>
+        <h2 id = "subtitle">Registre el candidato para la encuesta</h2>
+
+        <div id ="registerContainer">
+            <input id = "idRegis" placeholder= "ID" type="number">
+            <input id = "name" placeholder= "Nombre" type="text">
+            <button id = "bnRegister">Registrar</button>   
+
+             <h2 id = "subtitle">Vota por el candidato usando su ID</h2>
+             <input id = "idVote" placeholder= "ID" type="number">
+             <button id = "bnVote">Votar</button>  
         </div>
+
+        <div id ="buttons">
+            <button id = "bnCandidateList">Ver candidatos</button> 
+            <button id = "bnVoteList">Ver votaciones</button> 
+        </div>
+
     </body>
+
+    <script src = "main.js"></script>
+
 </html>
+

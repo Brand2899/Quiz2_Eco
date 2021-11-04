@@ -1,26 +1,22 @@
 {
-  "name": "quiz2-ecosistemas",
+  "name": "lab10_eco",
   "version": "1.0.0",
-  "description": "Quiz 2 Ecosistemas",
+  "description": "Laboratorio 10 Ecosistemas",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Brand2899/Quiz2_Eco.git"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack --watch --progress",
+    "visualize-main": "webpack --analyze"
   },
   "author": "Alejandro Brand",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Brand2899/Quiz2_Eco/issues"
-  },
-  "homepage": "https://github.com/Brand2899/Quiz2_Eco#readme",
   "dependencies": {
     "firebase": "^9.2.0"
   },
   "devDependencies": {
-    "webpack": "^5.61.0",
+    "webpack": "^5.60.0",
+    "webpack-bundle-analyzer": "^4.5.0",
     "webpack-cli": "^4.9.1"
   }
 }
