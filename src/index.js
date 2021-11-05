@@ -21,6 +21,7 @@ const name = document.getElementById("name");
 const code = document.getElementById("code");
 const course = document.getElementById("course");
 const bnEnroll = document.getElementById("bnEnroll");
+const studentsContainer = document.getElementById('studentsContainer');
 
 
 // Crear estudiente
@@ -41,6 +42,7 @@ const registerEvent = (e, event) =>{
     name.value = '';
     code.value = '';
     course.value = '';
+    update();
 }
 
 // Click Botones
@@ -55,7 +57,8 @@ function update(){
             student => {
                 let value = student.val();
                 console.log(value.name);
-
+                let line = new StudentLine(value);
+                studentsContainer.appendChild(line.render());
             });
     });
 }
