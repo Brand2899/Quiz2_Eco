@@ -1,50 +1,36 @@
-#registerContainer{
-    display: flex;
-    flex-direction: column;
-
-    width: 30%;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    
-} 
-
-#registerContainer * {
-    width: 80%;
-    margin: 5px 16px 5px 16px;
-} 
-
 #title {
     color:black;
-    text-align: center;
  } 
 
-#subtitle {
-   color:black;
-   text-align: center;
-   font-size: medium;
-   
-} 
-
-#buttons {
+#form{
     display: flex;
     flex-direction: column;
+    width: 30%;
+} 
 
-    width:20%;
-    padding-left: 65%;
+#form * {
+    width: 80%;
+    margin: 5px 16px 5px 16px;
+    background-color: rgb(white);
+    border-color: 230, 230, 230;
+    color: black;
+    padding: 3px;
 }
 
-#buttons *{
+#studentsCards{
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+}
+
+#studentsCards * {
+    width: 100%;
+    text-align: center;
+}
+
+#bnEnroll{
     height: 25px;
     margin: 3px 16px 3px 16px;
-    border-radius: 5px;
-    background-color:rgb(230, 230, 230);
-    border-color: 230, 230, 230;
-}
-
-#bnRegister, #bnVote{
-    height: 25px;
-    border-radius: 5px;
-    background-color:230, 230, 230;
-    border-color: 230, 230, 230;
+    background-color:rgb(46, 43, 233);
+    color: white;
 }

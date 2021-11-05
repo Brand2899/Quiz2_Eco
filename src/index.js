@@ -9,78 +9,29 @@ const firebaseApp = initializeApp(firebaseAppConfig);
 
 
 
-// REGISTRAR CANDIDATOS
-function candidateRegister (candidate){
+// Registrar Estudiantes
+function studentRegister (student){
     const db = getDatabase();
-    const dbRef = ref(db, 'candidates/' + candidate.name);
+    const dbRef = ref(db, 'students/' + student.name);
 
-    set(dbRef, candidate);
+    set(dbRef, student);
 }
 
-// Metodo para lista de candidatos
-function getCand(){
-    const db = getDatabase();
-    const dbRef = ref(db, 'candidates');
-
-    onValue(dbRef, (snapshot)=>{
-        const data = snapshot.val();
-        currentList(data);
-    });
-}
-
-// Metodo para lista de votos
-
-function getVote(){
-    
-}
-
-function currentList(info){
-    let text = "";
-    Object.keys(info).forEach((k,index)=>{
-        text += "ID:" +info[k].idRegis+ "   Nombre: " +info[k].name + "\n";
-    });
-    alert(text);
-}
-
-// REGISTRAR VOTOS
-function voteRegister (vote){
-    const db = getDatabase();
-    const dbRef = ref(db, 'votes/' + vote.idVote);
-
-    set(dbRef, vote);
-}
-
-const idRegis = document.getElementById("idRegis");
 const name = document.getElementById("name");
-const bnRegister = document.getElementById("bnRegister");
-
-const idVote = document.getElementById("idVote");
-const bnVote = document.getElementById("bnVote");
-
-const bnCandidateList = document.getElementById("bnCandidateList");
-const bnVoteList = document.getElementById("bnVoteList");
+const code = document.getElementById("code");
+const course = document.getElementById("course");
+const bnEnroll = document.getElementById("bnEnroll");
 
 
-// Metodo creación del usuario como un objeto
+// Crear estudiente
 const registerEvent = (e, event) =>{
-    const candidate = {
-        idRegis: idRegis.value,
-        name: name.value
+    const student = {
+        name: name.value,
+        code: code.value,
+        course: course.value,
     }
-    candidateRegister(candidate);
+    studentRegister(student);
 }
 
-// Metodo creación del voto como un objeto
-const voteEvent = (e, event) =>{
-    const vote = {
-        idVote: idVote.value,
-    }
-    voteRegister(vote);
-}
-
-
-// CLICKS
-bnRegister.addEventListener('click', registerEvent);
-bnVote.addEventListener('click',voteEvent);
-bnCandidateList.addEventListener('click', getCand);
-bnVoteList.addEventListener('click', getVote);
+// Click Botones
+bnEnroll.addEventListener('click', registerEvent);
