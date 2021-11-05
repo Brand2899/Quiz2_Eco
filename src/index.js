@@ -25,13 +25,37 @@ const bnEnroll = document.getElementById("bnEnroll");
 
 // Crear estudiente
 const registerEvent = (e, event) =>{
+
+    if(name.value === '' || code.value === '' || course.value === ''){
+        alert('hay campos vacios');
+        return;
+    }
+
     const student = {
         name: name.value,
         code: code.value,
         course: course.value,
     }
     studentRegister(student);
+
+    name.value = '';
+    code.value = '';
+    course.value = '';
 }
 
 // Click Botones
 bnEnroll.addEventListener('click', registerEvent);
+
+function update(){
+    const db = getDatabase();
+    const dbRef = ref(db, 'students');
+
+    onValue(dbRef, function(data){
+        data.forEach(
+            student => {
+                let value = student.val();
+                console.log(value.name);
+
+            });
+    });
+}
