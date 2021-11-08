@@ -51,9 +51,9 @@ function update(data){
             }
         });
     } else{
-        noBonusContainer.innerHTML = "Empty";
-        silverBonusContainer.innerHTML = "Empty";
-        goldBonusContainer.innerHTML = "Empty";
+        noBonusContainer.innerHTML = " ";
+        silverBonusContainer.innerHTML = " ";
+        goldBonusContainer.innerHTML = " ";
     }
 }
 

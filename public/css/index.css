@@ -28,9 +28,88 @@
     text-align: center;
 }
 
+#studentsContainer{
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+}
+
+#studentsContainer * {
+    text-align: center;
+}
+
 #bnEnroll{
     height: 25px;
     margin: 3px 16px 3px 16px;
     background-color:rgb(46, 43, 233);
     color: white;
+}
+
+#noBonusContainer{
+    width: 450px;
+}
+
+#silverBonusContainer{
+    width: 450px;
+}
+
+#goldBonusContainer{
+    width: 450px;
+}
+
+.component{
+    position: relative;
+    height: 200px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 20px;
+    font-family: Arial;
+    margin-bottom: 10px;
+}
+
+.studentCourse{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(160, 160, 160);
+    position: absolute;
+    top: 0px;
+    left: 20px;
+}
+
+.studentName{
+    position: absolute;
+    top: 40px;
+    left: 30px;
+}
+
+.studentCode{
+    position: absolute;
+    top: 60px;
+    left: 30px;
+}
+
+.studentScore{
+    font-size: 30px;
+    position: absolute;
+    bottom: 2px;
+    left: 20px;
+}
+
+.deleteButton{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+}
+
+.addButton{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: lime;
+    position: absolute;
+    right: 60px;
+    bottom: 5px;
 }

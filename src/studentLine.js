@@ -55,9 +55,9 @@ export class studentLine{
             set(dbRef, this.student.score + 1);
         });
 
+        comp.appendChild(course);
         comp.appendChild(name);
         comp.appendChild(code);
-        comp.appendChild(course);
         comp.appendChild(score);
 
         comp.appendChild(bnDelete);
